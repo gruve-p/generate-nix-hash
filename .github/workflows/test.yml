@@ -17,16 +17,16 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v0.18.1 # initial commit
-          owner: litecoin-project
-          repo: litecoin
+          rev: v22.0 # initial commit
+          owner: Groestlcoin
+          repo: groestlcoin
           file: config.json
 
       - name: Verify results
         run: |
           cat > expected.json <<EOF
           {
-            "rev": "v0.18.1",
+            "rev": "v22.0",
             "sha256": "21753zhyx1kmrlljc6kbjwrcb06dfcrsqvmw3iaki9a132qk6l5c"
           }
           EOF
