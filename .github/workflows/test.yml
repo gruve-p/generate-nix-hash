@@ -17,17 +17,13 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v22.0 # initial commit
-          owner: Groestlcoin
-          repo: groestlcoin
           file: config.json
 
       - name: Verify results
         run: |
           cat > expected.json <<EOF
           {
-            "rev": "v22.0",
-            "sha256": "104zzcigpk976iqyinjn6mw3l36zb1if7249iz44ds1zaxv3g1v1"
+            "sha256": "0cpna0nxcd1dw3nnzli36nf9zj28d2g9jf5y0zl9j18lvanvniha"
           }
           EOF
 
