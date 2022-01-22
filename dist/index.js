@@ -184,7 +184,7 @@ function run() {
             const file = (0, core_1.getInput)('file');
             const command = `nix-prefetch-url "https://raw.githubusercontent.com/bitcoin-core/packaging/22.x/debian/bitcoin-qt.desktop"`;
             const { stdout } = yield execAsync(command);
-            const result = { rev, sha256: stdout.trim() };
+            const result = { sha256: stdout.trim() };
             const content = `${JSON.stringify(result, null, 2)}\n`;
             (0, fs_1.writeFileSync)(file, content);
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
