@@ -30,9 +30,9 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: c61573364694a68d9993c8b0fb603b29e7251d79  # initial commit
-          owner: Gerschtli
-          repo: generate-nix-hash
+          rev: 0.17.3  # initial commit
+          owner: BTCGPU
+          repo: BTCGPU
           file: config.json
 
       - name: Verify results
