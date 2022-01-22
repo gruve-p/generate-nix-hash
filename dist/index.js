@@ -181,11 +181,8 @@ const execAsync = (0, util_1.promisify)(child_process_1.exec);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const rev = (0, core_1.getInput)('rev');
-            const owner = (0, core_1.getInput)('owner');
-            const repo = (0, core_1.getInput)('repo');
             const file = (0, core_1.getInput)('file');
-            const command = `nix-prefetch-url --unpack "https://github.com/${owner}/${repo}/archive/${rev}.tar.gz"`;
+            const command = `nix-prefetch-url --unpack "https://raw.githubusercontent.com/bitcoin-core/packaging/22.x/debian/bitcoin-qt.desktop"`;
             const { stdout } = yield execAsync(command);
             const result = { rev, sha256: stdout.trim() };
             const content = `${JSON.stringify(result, null, 2)}\n`;
