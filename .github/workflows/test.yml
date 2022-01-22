@@ -17,17 +17,17 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v0.21.13 # initial commit
-          owner: bitcoin-ABC
-          repo: bitcoin-abc
+          rev: v0.18.1 # initial commit
+          owner: litecoin-project
+          repo: litecoin
           file: config.json
 
       - name: Verify results
         run: |
           cat > expected.json <<EOF
           {
-            "rev": "0.21.13",
-            "sha256": "1s0qrrin8ry9klvjaxj4hd3qlf3cayfisq8pn7idqddgcg0lc079"
+            "rev": "v0.18.1",
+            "sha256": "11753zhyx1kmrlljc6kbjwrcb06dfcrsqvmw3iaki9a132qk6l5c"
           }
           EOF
 
