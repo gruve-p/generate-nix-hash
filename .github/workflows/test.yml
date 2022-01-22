@@ -4,19 +4,6 @@ on:
   push:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Run lints, tests and build package
-        run: |
-          npm ci
-          npm run all
-
-
   test:
     runs-on: ubuntu-latest
 
@@ -30,7 +17,7 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: 0.17.3  # initial commit
+          rev: v0.17.3  # initial commit
           owner: BTCGPU
           repo: BTCGPU
           file: config.json
