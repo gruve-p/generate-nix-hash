@@ -17,16 +17,16 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v0.17.3  # initial commit
-          owner: BTCGPU
-          repo: BTCGPU
+          rev: v0.21.13 # initial commit
+          owner: bitcoin-ABC
+          repo: bitcoin-abc
           file: config.json
 
       - name: Verify results
         run: |
           cat > expected.json <<EOF
           {
-            "rev": "c61573364694a68d9993c8b0fb603b29e7251d79",
+            "rev": "0.21.13",
             "sha256": "1s0qrrin8ry9klvjaxj4hd3qlf3cayfisq8pn7idqddgcg0lc079"
           }
           EOF
