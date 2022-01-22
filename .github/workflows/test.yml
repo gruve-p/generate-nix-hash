@@ -23,7 +23,7 @@ jobs:
         run: |
           cat > expected.json <<EOF
           {
-            "sha256": "0cpna0nxcd1dw3nnzli36nf9zj28d2g9jf5y0zl9j18lvanvniha"
+            "sha256": "0000000000000000000000000000000000000000000000000000"
           }
           EOF
 
