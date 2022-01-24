@@ -182,7 +182,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const file = (0, core_1.getInput)('file');
-            const command = `nix-prefetch-url "https://github.com/ElementsProject/lightning/releases/download/v0.10.2/clightning-v0.10.2.zip"`;
+            const command = `nix-prefetch-url --unpack "https://github.com/ElementsProject/lightning/releases/download/v0.10.2/clightning-v0.10.2.zip"`;
             const { stdout } = yield execAsync(command);
             const result = { sha256: stdout.trim() };
             const content = `${JSON.stringify(result, null, 2)}\n`;
