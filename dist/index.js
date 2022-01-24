@@ -182,7 +182,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const file = (0, core_1.getInput)('file');
-            const command = `nix-prefetch-url --unpack "https://pypi.io/packages/source/g/groestlcoin_hash/groestlcoin_hash-1.0.1.tar.gz"`;
+            const command = `nix-prefetch-url --type sha256 --unpack "https://pypi.io/packages/source/g/groestlcoin_hash/groestlcoin_hash-1.0.1.tar.gz"`;
             const { stdout } = yield execAsync(command);
             const result = { sha256: stdout.trim() };
             const content = `${JSON.stringify(result, null, 2)}\n`;
