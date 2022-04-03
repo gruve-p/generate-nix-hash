@@ -17,7 +17,7 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v4.2.0 # initial commit
+          rev: refs/tags/v4.2.0 # initial commit
           owner: Groestlcoin
           repo: electrum-grs
           file: config.json
