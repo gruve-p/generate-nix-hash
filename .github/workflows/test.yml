@@ -17,7 +17,7 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v4.1.5 # initial commit
+          rev: v4.2.0 # initial commit
           owner: Groestlcoin
           repo: electrum-grs
           file: config.json
@@ -26,8 +26,8 @@ jobs:
         run: |
           cat > expected.json <<EOF
           {
-            "rev": "v4.1.5",
-            "sha256": "104zzcigpk976iqyinjn6mw3l36zb1if7249iz44ds1zaxv3g1v1"
+            "rev": "v4.2.0",
+            "sha256": "0wvbjj80r1zxpz24adkicxsdjnv3nciga6rl1wfmky463w03rca2"
           }
           EOF
 
