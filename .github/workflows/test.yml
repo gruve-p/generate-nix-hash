@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install nix
-        uses: cachix/install-nix-action@v18
+        uses: cachix/install-nix-action@v12
 
       - name: Run generate-nix-hash action
         uses: ./
@@ -27,7 +27,7 @@ jobs:
           cat > expected.json <<EOF
           {
             "rev": "v25.0",
-            "sha256": "0k14y3iv5l26r820wzkwqxi67kwh26i0yq20ffd72shicjs1d3qc"
+            "sha256": "03w5n3qjha63mgj7zk8q17x5j63la3i4li7bf5i1yw59ijqpmnqg"
           }
           EOF
 
