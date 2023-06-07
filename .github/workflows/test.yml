@@ -1,19 +1,15 @@
-name: "build-test"
-on:
-  pull_request:
-  push:
+name: CI
+
+on: [push, pull_request]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
       - name: Install nix
         uses: cachix/install-nix-action@v18
-
       - name: Run generate-nix-hash action
         uses: ./
         with:
@@ -21,7 +17,6 @@ jobs:
           owner: Groestlcoin
           repo: groestlcoin
           file: config.json
-
       - name: Verify results
         run: |
           cat > expected.json <<EOF
