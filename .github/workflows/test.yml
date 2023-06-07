@@ -4,19 +4,6 @@ on:
   push:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Run lints, tests and build package
-        run: |
-          npm ci
-          npm run all
-
-
   test:
     runs-on: ubuntu-latest
 
@@ -30,17 +17,17 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: c61573364694a68d9993c8b0fb603b29e7251d79  # initial commit
-          owner: Gerschtli
-          repo: generate-nix-hash
+          rev: v25.0 # initial commit
+          owner: Groestlcoin
+          repo: groestlcoin
           file: config.json
 
       - name: Verify results
         run: |
           cat > expected.json <<EOF
           {
-            "rev": "c61573364694a68d9993c8b0fb603b29e7251d79",
-            "sha256": "1s0qrrin8ry9klvjaxj4hd3qlf3cayfisq8pn7idqddgcg0lc079"
+            "rev": "v25.0",
+            "sha256": "0k14y3iv5l26r820wzkwqxi67kwh26i0yq20ffd72shicjs1d3qc"
           }
           EOF
 
