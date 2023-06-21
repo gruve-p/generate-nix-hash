@@ -27,7 +27,7 @@ jobs:
           cat > expected.json <<EOF
           {
             "rev": "refs/tags/v4.4.4",
-            "sha256": "1h9r32wdn0p7br36r719x96c8gay83dijw80y2ks951mam16mkkb"
+            "sha256": "0fl01qdvb1z6l6kwipj1lj0qmjk3mzw25wv7yh5j1hh1f5lng0s8"
           }
           EOF
 
