@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install nix
-        uses: cachix/install-nix-action@v12
+        uses: cachix/install-nix-action@v26
 
       - name: Run generate-nix-hash action
         uses: ./
@@ -27,7 +27,7 @@ jobs:
           cat > expected.json <<EOF
           {
             "rev": "v27.0",
-            "sha256": "00qvaf53jszsk1rr029zmq60v8w0r92192ab65k2krkmh7ybla9l"
+            "sha256": "0f6vi2k5xvjrhiazfjcd4aj246dfcg51xsnqb9wdjl41cg0ckwmf"
           }
           EOF
 
