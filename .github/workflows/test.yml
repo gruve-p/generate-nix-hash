@@ -17,7 +17,7 @@ jobs:
       - name: Run generate-nix-hash action
         uses: ./
         with:
-          rev: v26.0 # initial commit
+          rev: v27.0 # initial commit
           owner: Groestlcoin
           repo: groestlcoin
           file: config.json
